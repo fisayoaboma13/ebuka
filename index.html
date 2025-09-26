@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no" />
+     <meta name="theme-color" content="#2a2431" />
+     <meta name="apple-mobile-web-app-capable" content="yes" />
+     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Skill Hub - Mobile UI</title>
+    <meta name="description" content="FPNO Skills Hub mobile-style UI" />
+
+    <!-- Keep Firebase SDK + initialization -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script>
+      // Initialize Firebase (kept intact as requested)
+      const firebaseConfig = {
+        apiKey: "AIzaSyA9-SeBMqujxMleatSd23FM5vlLWdOVUPA",
+        authDomain: "grandpa-523e1.firebaseapp.com",
+        projectId: "grandpa-523e1",
+        storageBucket: "grandpa-523e1.firebasestorage.app",
+        messagingSenderId: "1049062266843",
+        appId: "1:1049062266843:web:6f8b23c5a1f20a7836f9fe"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Styles and fonts -->
+  <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/newsletter.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Roboto for headings (fallbacks to Arial) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/fav.ico" />
+  </head>
+  <body style="padding-top: 30px;">
+      <!-- Main app UI (trimmed, kept) -->
+      <!-- Centered polybag logo fixed at top -->
+     
+      <main class="app-screen" role="main" aria-label="Skill Hub Main Screen" tabindex="0" style="overflow-x:hidden; min-height:100vh;">
+      <header class="app-top">
+         <div class="site-logo" style="touch-action:manipulation;">
+        <img style="width: 100%; height: auto;" src="images/polybay.png" alt="Polybag Logo" draggable="false" />
+      </div>
+        <div class="profile-row" style="margin-top: 18px;">
+          <div class="avatar">
+            <img src="images/me1.jpg" alt="avatar" loading="lazy" width="48" height="48" />
+            <span class="medal">3</span>
+          </div>
+          <div class="greeting">Hi, <span class="name">Enoch Chukwudi Thankgod</span></div>
+          <div class="small-actions">
+            <i class="fas fa-headset"></i>
+            <i class="fas fa-qrcode"></i>
+            <i class="fas fa-bell"></i>
+          </div>
+        </div>
+
+        <div class="reg-card">
+          <div class="reg-label">STUDENT REGISTERATION NUMBER :</div>
+          <div class="reg-num">23/0100/1/CS</div>
+        </div>
+      </header>
+
+      <section class="cards-section">
+        <div class="card tab-card">
+          <div class="tab-title">Porject / Portal</div>
+          <div class="tab-icons">
+            <div class="tile">
+              <div class="tile-icon"><i class="fas fa-user-graduate"></i></div>
+              <div class="tile-label">Students Portal</div>
+            </div>
+            <div class="tile">
+              <div class="tile-icon"><i class="fas fa-wallet"></i></div>
+              <div class="tile-label">My Supervisor</div>
+            </div>
+            <div class="tile">
+              <div class="tile-icon"><i class="fas fa-coins"></i></div>
+              <div class="tile-label">My Project</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card campus-card" style="margin-top: 20px;margin-bottom: 20px;">
+          <div class="tab-title">Campus</div>
+          <div class="campus-grid">
+            <div class="campus-tile"><div class="icon"><i class="fas fa-chalkboard-teacher"></i></div><div>My Lectures</div></div>
+            <div class="campus-tile"><div class="icon"><i class="fas fa-globe"></i></div><div>News Hub</div></div>
+            <div class="campus-tile"><div class="icon"><i class="fas fa-bus"></i></div><div>Nek-Ride</div></div>
+            <div class="campus-tile"><div class="icon"><i class="fas fa-calendar-alt"></i></div><div>Events</div></div>
+            <div class="campus-tile"><div class="icon"><i class="fas fa-book"></i></div><div>Books</div></div>
+            <div class="campus-tile"><div class="icon"><i class="fas fa-building"></i></div><div>Department</div></div>
+           
+          </div>
+        </div>
+
+        <div class="card community-card">
+          <div class="tab-title">Community / Business</div>
+          <div class="community-row">
+            <div class="community-tile">Buy / Sell</div>
+            <div class="community-tile">Manage Ads</div>
+            <div class="community-tile">Services</div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="bottom-nav" aria-label="Primary">
+        <div class="nav-dot"></div>
+        <div class="nav-square"></div>
+        <div class="nav-square"></div>
+        <div class="nav-square"></div>
+        <div class="nav-dot"></div>
+      </nav>
+    </main>
+
+  </body>
+</html>
