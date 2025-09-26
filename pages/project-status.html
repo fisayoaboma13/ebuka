@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Project Status</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/portal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="app-screen">
+        <header class="portal-header">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1>Project Status</h1>
+        </header>
+
+        <div class="project-status">
+            <div class="status-card">
+                <div class="status-header">
+                    <h2>Current Progress</h2>
+                    <div class="progress-circle">
+                        <span class="progress-text">65%</span>
+                    </div>
+                </div>
+                
+                <div class="milestone-list">
+                    <div class="milestone completed">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="milestone-content">
+                            <h3>Project Proposal</h3>
+                            <p>Approved on Sept 15, 2025</p>
+                        </div>
+                    </div>
+                    <div class="milestone completed">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="milestone-content">
+                            <h3>Literature Review</h3>
+                            <p>Completed on Sept 20, 2025</p>
+                        </div>
+                    </div>
+                    <div class="milestone active">
+                        <i class="fas fa-clock"></i>
+                        <div class="milestone-content">
+                            <h3>Implementation</h3>
+                            <p>In Progress - Due Oct 15, 2025</p>
+                        </div>
+                    </div>
+                    <div class="milestone">
+                        <i class="fas fa-hourglass"></i>
+                        <div class="milestone-content">
+                            <h3>Testing & Validation</h3>
+                            <p>Starts Oct 16, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-actions">
+                <h2>Next Actions</h2>
+                <div class="action-buttons">
+                    <button class="action-btn">
+                        <i class="fas fa-file-upload"></i>
+                        Submit Progress Report
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-calendar-alt"></i>
+                        Schedule Review
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../scripts/firebase-init.js"></script>
+    <script src="../scripts/project-status.js"></script>
+</body>
+</html>

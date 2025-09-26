@@ -45,7 +45,7 @@
       </div>
         <div class="profile-row" style="margin-top: 18px;">
           <div class="avatar">
-            <img src="images/me1.jpg" alt="avatar" loading="lazy" width="48" height="48" />
+            <img src="images/nophoto.jpg" alt="avatar" loading="lazy" width="48" height="48" />
             <span class="medal">3</span>
           </div>
           <div class="greeting">Hi, <span class="name">Enoch Chukwudi Thankgod</span></div>
@@ -66,17 +66,18 @@
         <div class="card tab-card">
           <div class="tab-title">Porject / Portal</div>
           <div class="tab-icons">
-            <div class="tile">
+            <a href="pages/student-portal.html" class="tile">
               <div class="tile-icon"><i class="fas fa-user-graduate"></i></div>
               <div class="tile-label">Students Portal</div>
-            </div>
-            <div class="tile">
-              <div class="tile-icon"><i class="fas fa-wallet"></i></div>
+            </a>
+            <a href="pages/supervisor.html" class="tile">
+              <div class="tile-icon"><i class="fas fa-chalkboard-teacher"></i></div>
               <div class="tile-label">My Supervisor</div>
-            </div>
-            <div class="tile">
-              <div class="tile-icon"><i class="fas fa-coins"></i></div>
-              <div class="tile-label">My Project</div>
+            </a>
+            <a href="pages/admin.html" class="tile">
+              <div class="tile-icon"><i class="fas fa-user-shield"></i></div>
+              <div class="tile-label">Admin Mode</div>
+            </a>
             </div>
           </div>
         </div>
@@ -84,32 +85,24 @@
         <div class="card campus-card" style="margin-top: 20px;margin-bottom: 20px;">
           <div class="tab-title">Campus</div>
           <div class="campus-grid">
-            <div class="campus-tile"><div class="icon"><i class="fas fa-chalkboard-teacher"></i></div><div>My Lectures</div></div>
+            <div class="campus-tile"><div class="icon"><i class="fas fa-chalkboard-teacher"></i></div><div>My Supervisor</div></div>
             <div class="campus-tile"><div class="icon"><i class="fas fa-globe"></i></div><div>News Hub</div></div>
-            <div class="campus-tile"><div class="icon"><i class="fas fa-bus"></i></div><div>Nek-Ride</div></div>
-            <div class="campus-tile"><div class="icon"><i class="fas fa-calendar-alt"></i></div><div>Events</div></div>
-            <div class="campus-tile"><div class="icon"><i class="fas fa-book"></i></div><div>Books</div></div>
-            <div class="campus-tile"><div class="icon"><i class="fas fa-building"></i></div><div>Department</div></div>
+            <div class="campus-tile"><div class="icon"><i class="fas fa-bus"></i></div><div>Project Status</div></div>
+            <div class="campus-tile"><div class="icon"><i class="fas fa-calendar-alt"></i></div><div>Submit for review</div></div>
+            <div class="campus-tile"><div class="icon"><i class="fas fa-book"></i></div><div>Notifications</div></div>
+            <div class="campus-tile"><div class="icon"><i class="fas fa-building"></i></div><div>Duplicate Resources</div></div>
            
           </div>
         </div>
 
-        <div class="card community-card">
-          <div class="tab-title">Community / Business</div>
-          <div class="community-row">
-            <div class="community-tile">Buy / Sell</div>
-            <div class="community-tile">Manage Ads</div>
-            <div class="community-tile">Services</div>
-          </div>
-        </div>
+       
       </section>
 
       <nav class="bottom-nav" aria-label="Primary">
-        <div class="nav-dot"></div>
-        <div class="nav-square"></div>
-        <div class="nav-square"></div>
-        <div class="nav-square"></div>
-        <div class="nav-dot"></div>
+        <button class="nav-login" aria-label="Login to your account">
+          <span class="login-label">Login</span>
+          <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+        </button>
       </nav>
     </main>
 

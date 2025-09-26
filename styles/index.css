@@ -73,16 +73,54 @@ body {
 .tile-icon { width:56px; height:56px; border-radius:14px; background: linear-gradient(180deg,#4b3b6a,#3a2f4a); display:flex; align-items:center; justify-content:center; font-size:26px; color:#ffd700 }
 .tile-label { font-size:14px; font-weight:700; text-align:center }
 
+/* Ensure tile links (anchor elements with class .tile) always display white text and no underline */
+.tab-icons .tile { color: #fff; text-decoration: none; }
+.tab-icons .tile:link, .tab-icons .tile:visited, .tab-icons .tile:hover, .tab-icons .tile:active { color: inherit; text-decoration: none; }
+.tab-icons .tile .tile-label { color: #fff !important }
+
 .campus-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; padding:12px }
-.campus-tile { background: rgba(255,255,255,0.03); border-radius:14px; padding:12px; display:flex; flex-direction:column; gap:8px; align-items:center; justify-content:center; color:#f3e9e9; font-weight:700 }
+.campus-tile { background: rgba(255,255,255,0.03); border-radius:14px; padding:12px; display:flex; flex-direction:column; gap:8px; align-items:center; justify-content:center; color:#f3e9e9; font-weight:700; text-align:center }
 .campus-tile .icon { width:48px; height:48px; border-radius:12px; background: linear-gradient(180deg,#4b3b6a,#3a2f4a); display:flex; align-items:center; justify-content:center; color:#ffd700; font-size:20px }
+.campus-tile > div:last-child { /* label */
+  display:block;
+  white-space:normal; /* allow wrapping */
+  word-break:break-word;
+  max-width: 100%;
+  line-height:1.1;
+  font-size: 14px;
+}
 
 .community-row { display:flex; gap:14px; padding:12px; justify-content:space-between }
 .community-tile { flex:1; background: rgba(255,255,255,0.03); border-radius:14px; padding:22px; text-align:center; font-weight:700 }
 
 .bottom-nav { position:fixed; left:0; right:0; bottom:0; padding:18px 28px; display:flex; gap:18px; justify-content:space-between; align-items:center; background: linear-gradient(180deg,#2b2130,#241a28); border-top-left-radius:22px; border-top-right-radius:22px; box-shadow:0 -10px 30px rgba(0,0,0,0.6) }
-.bottom-nav .nav-dot { width:54px; height:54px; background:#fff; opacity:0.12; border-radius:50% }
+.bottom-nav .nav-dot { display:none /* hidden: replaced by .nav-login button */ }
 .bottom-nav .nav-square { width:62px; height:54px; background:#fff; opacity:0.12; border-radius:12px }
+
+/* Styled login button used in the bottom-nav */
+.nav-login {
+  background: linear-gradient(90deg, var(--primary-color), #ff7b7b);
+  color: #111;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(229,91,91,0.25), 0 2px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+}
+.nav-login i { font-size: 16px }
+.nav-login:active { transform: translateY(1px) }
+.nav-login:hover { box-shadow: 0 12px 28px rgba(229,91,91,0.28) }
+.nav-login:focus { outline: 3px solid rgba(229,91,91,0.16); outline-offset: 3px }
+
+@media (max-width: 480px) {
+  .nav-login { padding: 10px 14px; font-size: 14px; border-radius: 10px }
+}
 
 /* Footer / newsletter */
 .footer { background: linear-gradient(to top,#450303,#000000); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding:4rem 5% 2rem; color:white }
@@ -467,13 +505,14 @@ body { position: relative }
 .site-logo img { display:block; width:var(--site-logo-size); height:auto; max-width:32vw }
 
 @media (max-width:420px) {
-  :root { --site-logo-size: 90px }
+  /* avatar sizing handled by the main .avatar rule and dedicated media queries to avoid conflicts */
   .site-logo img { width:var(--site-logo-size); max-width:28vw }
 }
 
 .cart-popup.active {
     display: block;
 }
+  .campus-tile > div:last-child { font-size: 12px }
 
 .cart-item {
     display: flex;

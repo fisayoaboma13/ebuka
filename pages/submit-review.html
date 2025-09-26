@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Submit for Review</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/portal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="app-screen">
+        <header class="portal-header">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1>Submit for Review</h1>
+        </header>
+
+        <div class="submit-review">
+            <form id="submitForm" class="review-form">
+                <div class="form-group">
+                    <label for="submissionType">Submission Type</label>
+                    <select id="submissionType" required>
+                        <option value="">Select submission type</option>
+                        <option value="proposal">Project Proposal</option>
+                        <option value="progress">Progress Report</option>
+                        <option value="chapter">Chapter Submission</option>
+                        <option value="final">Final Project</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="Enter submission title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="4" placeholder="Brief description of your submission"></textarea>
+                </div>
+
+                <div class="file-upload">
+                    <label for="files">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <span>Upload Files</span>
+                        <small>PDF, DOC, DOCX (Max 10MB)</small>
+                    </label>
+                    <input type="file" id="files" accept=".pdf,.doc,.docx" multiple>
+                    <div id="fileList" class="file-list"></div>
+                </div>
+
+                <div class="submission-summary">
+                    <h3>Submission Summary</h3>
+                    <div class="summary-info">
+                        <p><i class="fas fa-user"></i> Enoch Chukwudi Thankgod</p>
+                        <p><i class="fas fa-id-card"></i> 23/0100/1/CS</p>
+                        <p><i class="fas fa-calendar"></i> September 26, 2025</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-paper-plane"></i>
+                    Submit for Review
+                </button>
+            </form>
+        </div>
+    </main>
+    <script src="../scripts/firebase-init.js"></script>
+    <script src="../scripts/submit-review.js"></script>
+</body>
+</html>
