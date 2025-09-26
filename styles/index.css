@@ -60,10 +60,16 @@ body {
 
 .reg-card { margin-top:14px; background: linear-gradient(90deg, rgba(19,7,30,0.95), rgba(74, 52, 52, 0.95)); border-radius:14px; padding:18px; box-shadow:0 12px 30px rgba(0,0,0,0.55) }
 .reg-label { color:#d9f08a; font-weight:700; font-size:12px; letter-spacing:0.6px }
-.reg-num { margin-top:8px; font-size:34px; font-weight:800; color:#fff }
-
-/* Use Roboto if available, otherwise Arial, then sans-serif */
-.reg-num { font-family: 'Roboto', Arial, sans-serif; letter-spacing:0.6px }
+.reg-num { 
+    margin-top:8px; 
+    font-size:34px; 
+    font-weight:800; 
+    color:#fff !important; /* Force white color */
+    user-select: none; /* Prevent text selection */
+    pointer-events: none; /* Prevent interaction */
+    font-family: 'Roboto', Arial, sans-serif;
+    letter-spacing:0.6px;
+}
 
 .cards-section { padding:18px 14px 120px; display:flex; flex-direction:column; gap:18px }
 .card { background: linear-gradient(180deg,#3a2f4a,#2a2233); border-radius:18px; padding:12px; box-shadow:0 8px 28px rgba(0,0,0,0.6) }
