@@ -51,7 +51,7 @@
           <div class="greeting">Hi, <span class="name">Enoch Chukwudi Thankgod</span></div>
           <div class="small-actions">
             <i class="fas fa-headset"></i>
-            <i class="fas fa-qrcode"></i>
+           
             <i class="fas fa-bell"></i>
           </div>
         </div>
@@ -64,7 +64,7 @@
 
       <section class="cards-section">
         <div class="card tab-card">
-          <div class="tab-title">Porject / Portal</div>
+          <div class="tab-title">Project / Portal</div>
           <div class="tab-icons">
             <a href="pages/student-portal.html" class="tile">
               <div class="tile-icon"><i class="fas fa-user-graduate"></i></div>
@@ -75,36 +75,50 @@
               <div class="tile-label">My Supervisor</div>
             </a>
             <a href="pages/admin.html" class="tile">
-              <div class="tile-icon"><i class="fas fa-user-shield"></i></div>
-              <div class="tile-label">Admin Mode</div>
+              <div class="tile-icon"><i class="fas fa-file"></i></div>
+              <div class="tile-label">My proect</div>
             </a>
             </div>
           </div>
         </div>
 
-        <div class="card campus-card" style="margin-top: 20px;margin-bottom: 20px;">
-          <div class="tab-title">Campus</div>
-          <div class="campus-grid">
-            <div class="campus-tile"><div class="icon"><i class="fas fa-chalkboard-teacher"></i></div><div>My Supervisor</div></div>
-            <div class="campus-tile"><div class="icon"><i class="fas fa-globe"></i></div><div>News Hub</div></div>
-            <div class="campus-tile"><div class="icon"><i class="fas fa-bus"></i></div><div>Project Status</div></div>
-            <div class="campus-tile"><div class="icon"><i class="fas fa-calendar-alt"></i></div><div>Submit for review</div></div>
-            <div class="campus-tile"><div class="icon"><i class="fas fa-book"></i></div><div>Notifications</div></div>
-            <div class="campus-tile"><div class="icon"><i class="fas fa-building"></i></div><div>Duplicate Resources</div></div>
-           
-          </div>
-        </div>
+      
 
        
       </section>
 
       <nav class="bottom-nav" aria-label="Primary">
-        <button class="nav-login" aria-label="Login to your account">
+        <a href="login.html" class="nav-login" aria-label="Login to your account">
           <span class="login-label">Login</span>
           <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
-        </button>
+        </a>
       </nav>
     </main>
+</main>
+
+  <script>
+    // Ensure the page always loads at the top (prevents browsers restoring previous scroll position)
+    try {
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+    } catch (e) {
+      // ignore
+    }
+
+    function scrollToTopNow() {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+
+    // Fire on initial DOM ready
+    window.addEventListener('DOMContentLoaded', scrollToTopNow, { passive: true });
+
+    // Fire when page is shown (covers back/forward cache and some refresh behaviors)
+    window.addEventListener('pageshow', function (ev) {
+      // ev.persisted is true when page is loaded from bfcache
+      scrollToTopNow();
+    }, { passive: true });
+  </script>
 
   </body>
 </html>
