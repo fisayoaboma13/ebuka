@@ -63,6 +63,8 @@ body {
 .reg-num { 
     margin-top:8px;
     display: block;
+    text-decoration: none !important;
+    border-bottom: none !important;
 }
 
 .reg-num span {
@@ -76,15 +78,21 @@ body {
     user-select: none;
     pointer-events: none;
     text-decoration: none !important;
+    border-bottom: none !important;
     cursor: default;
+    display: inline-block;
 }
 
-/* Additional safeguards for mobile browsers */
-.reg-num span:not(a),
-.reg-num span:not(button) {
-    color: #fff !important;
-    -webkit-text-fill-color: #fff !important;
+/* Comprehensive anti-underline rules */
+.reg-num,
+.reg-num span,
+.reg-num *,
+.reg-card .reg-num,
+.reg-card .reg-num span {
     text-decoration: none !important;
+    border-bottom: none !important;
+    -webkit-text-decoration: none !important;
+    -moz-text-decoration: none !important;
 }
 
 .cards-section { padding:18px 14px 120px; display:flex; flex-direction:column; gap:18px }
