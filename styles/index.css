@@ -69,6 +69,18 @@ body {
     pointer-events: none; /* Prevent interaction */
     font-family: 'Roboto', Arial, sans-serif;
     letter-spacing:0.6px;
+    -webkit-text-fill-color: #fff !important; /* Force white on iOS/Safari */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+/* Ensure white color in all states and devices */
+.reg-num:link,
+.reg-num:visited,
+.reg-num:hover,
+.reg-num:active,
+.reg-num:-webkit-any-link {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
 }
 
 .cards-section { padding:18px 14px 120px; display:flex; flex-direction:column; gap:18px }
